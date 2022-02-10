@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ternary Operator</title>
+</head>
+<body>
+    <script>
+
+        // contoh masalah
+
+        const nilai = 7;
+        
+        if(nilai >= 75){
+            ucapan = "Selamat anda lulus";
+        }else{
+            ucapan = "Silahkan coba lagi";
+        }
+
+        document.writeln(`${ucapan}`);
+        document.writeln(`</br>`);
+
+        // di persingkat
+
+        const hasil = 80
+        ucapan = hasil >= 75 ? "Selamat anda lulus!" : "Silahkan coba lagi!";
+        document.writeln(`${ucapan}`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let arrayKosong = [];
+        let namaHewan = ["Kucing", "Anjing", "Kelinci", "Burung"];
+
+        // Mengisi Array
+        const names = [];
+        names.push("Wawal");
+        names.push("Azalea");
+        names.push("Killua", "Geedorah");
+
+        console.table(names);
+        console.table(names[3]);
+
+        namaHewan[3] = "Hamster";
+        console.table(namaHewan);
+
+        delete namaHewan[3]; // Menghapus isi
+        namaHewan.push(["Sapi", "Kambing", "Unta"]); // Array dalam Array
+        console.table(namaHewan); // Menampilkan isi
+
+    </script>
+</body>
+</html>

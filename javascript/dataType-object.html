@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Doc</title>
+</head>
+<body>
+    <script>
+
+        const person = {};
+
+        // Menambah atau mengubah
+        person["nama"] = "Maulana Syawal";
+        person["alamat"] = "Indonesia";
+        person["usia"] = 18;
+
+        console.info(`Nama : ${person.nama}`);
+        console.info(`Alamat : ${person.alamat}`);
+        console.info(`Umur : ${person.usia}`);
+
+        // Menghapus
+        delete person["usia"];
+
+        console.table(person)
+
+        // Membuat object dengan Properties ***Shorthand
+        const orang = {
+            nama: "Killua",
+            umur: 30,
+            alamat: "PTB D3/10"
+        }
+
+        console.table(orang);
+
+        const nama = {};
+
+        nama["first"] = "Maulana";
+        nama["mid"] = "Syawal";
+        nama["last"] = "Wiguna";
+
+        console.info(`Nama Pertama : ${nama.first}`);
+        console.info(`Nama Tengah : ${nama.mid}`);
+        console.info(`Nama Terakhir : ${nama.last}`);
+
+    </script>
+</body>
+</html>
