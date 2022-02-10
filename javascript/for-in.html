@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>For In</title>
+</head>
+<body>
+    <script>
+
+        // Mengambil data di dalam object / index di dalam array
+
+        // Object
+        const person = {
+            firstName: "Wawal",
+            lastName: "Azalea"
+        }
+
+        for(const property in person){
+            document.writeln(`<p>${property} : ${person[property]}</p>`)
+        }
+
+        // Array
+        const names = ["Wawal", "Azalea"];
+        for(const index in names){
+            document.writeln(`<p>${index} : ${names[index]}</p>`)
+        }
+
+    </script>
+</body>
+</html>
