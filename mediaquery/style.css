@@ -5,11 +5,22 @@
     font-family: sans-serif;
 }
 
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .kotak {
     border: 2px solid black;
-    width: 10em;
-    height: 10em;
+    min-width: 30rem;
+    min-height: 30rem;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media only screen and (max-width: 600px){
