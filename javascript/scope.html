@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Scope</title>
+  </head>
+  <body>
+    <script>
+      // Global Scope
+      let counter = 0;
+
+      // Global Scope
+      function hitMe() {
+        // Local Scope hitMe
+        counter++;
+      }
+
+      // Global Scope
+      function other() {
+        // Local Scope other
+      }
+
+      hitMe();
+      hitMe();
+
+      console.info(counter);
+
+      // Scope
+      function first() {
+        // local scope first
+        let firstVariable = 'satu';
+        function firstNested() {
+          console.info(firstVariable);
+        }
+        firstNested();
+      }
+
+      first();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Function Anonymous</title>
+  </head>
+  <body>
+    <script>
+      // Anonymous function dalam variable
+      const say = function (name) {
+        document.writeln(`<p>Hello ${name}`);
+      };
+
+      say('Wawal');
+
+      // Anonymous function dalam parameter
+
+      function giveMeName(callback) {
+        callback('Wawal');
+      }
+      giveMeName(say);
+
+      giveMeName(function (name) {
+        document.writeln(`<p>Hi ${name}`);
+      });
+    </script>
+  </body>
+</html>
