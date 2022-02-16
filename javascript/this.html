@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>This</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: 'Wawal',
+        sayHello: function (name) {
+          console.info(this);
+          console.info(`Hello, my name is ${name}`);
+        },
+      };
+      person.sayHello('Wawal');
+
+      const people = {
+        name: 'Killua',
+        sayHi: function (nama) {
+          console.info(`Hi ${nama}, my name is ${this.name}`);
+        },
+      };
+
+      people.sayHi('Wawal');
+    </script>
+  </body>
+</html>
