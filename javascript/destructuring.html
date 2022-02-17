@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Desctructuring</title>
+  </head>
+  <body>
+    <script>
+      // {
+      //   const names = ['Maulana', 'Syawal', 'Wiguna', 'Killua', 'Azalea'];
+      //   const [fName, mName, lName, ...others] = names;
+      //   console.info(fName);
+      //   console.info(mName);
+      //   console.info(lName);
+      //   console.info(others);
+      // }
+
+      {
+        const person = {
+          firstName: 'Maulana',
+          lastName: 'Syawal',
+          address: {
+            street: 'PTB',
+            city: 'Jakarta',
+            country: 'Indonesia',
+          },
+          hobby: 'Games',
+          channel: 'WawalTV',
+        };
+
+        let {
+          firstName,
+          lastName,
+          address: { city, street, country },
+          ...others
+        } = person;
+        console.info(firstName);
+        console.info(lastName);
+        console.info(city);
+        console.info(street);
+        console.info(country);
+        console.info(others);
+      }
+
+      // Desctructuring di function parameter object
+      {
+        function displayPerson({ firstName, middleName, lastName }) {
+          console.info(firstName);
+          console.info(middleName);
+          console.info(lastName);
+        }
+
+        const person = {
+          firstName: 'Wawal',
+          middleName: 'Azalea',
+          lastName: 'Zen',
+        };
+        displayPerson(person);
+      }
+
+      // Desctructuring di function parameter array
+      {
+        function sum([satu, dua]) {
+          return satu + dua;
+        }
+
+        console.info(sum([5, 7]));
+      }
+
+      // Default Value     * lastname = 'Zen'
+      {
+        const names = ['Bayhaqi', 'Killua'];
+        const [firstName, middleName = 'Zen', lastName = 'unknown'] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      // Desctructuring di function parameter object
+      {
+        const person = {
+          firstName: 'kucing',
+          middleName: 'liaw',
+        };
+
+        let { firstName, middleName, lastName = 'belum di atur' } = person;
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      // Destructuring menggunakan nama variable lain
+      {
+        const person = {
+          firstName: 'kucing',
+          middleName: 'liaw',
+        };
+
+        let {
+          firstName: namaDepan,
+          middleName: namaTengah = 'Ramadhan',
+          lastName: namaBelakang,
+        } = person;
+        console.info(namaDepan);
+        console.info(namaTengah);
+        console.info(namaBelakang);
+      }
+    </script>
+  </body>
+</html>
